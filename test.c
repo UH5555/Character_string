@@ -203,6 +203,10 @@
 //		{
 //			return cur;//找到子串
 //		}
+//		if (*s1 == '\0')
+//		{
+//			return NULL;
+//		}
 //		cur++;
 //	}
 //	return NULL;
@@ -219,5 +223,85 @@
 //		printf("子串不存在");
 //	else
 //		printf("%s\n", ret);
+//	return 0;
+//}
+
+//int main()
+//{
+//	//192.168.160.10 - .
+//	//192 168 160 10 - strtok
+//	//char arr[] = "16542@163.com";
+//	//char* p = "@.";
+//	//点分十进制的表示形式。
+//	char arr[] = "192.168.160.10";
+//	char* p = ".";
+//
+//
+//	char buf[1024] = { 0 };
+//	strcpy(buf, arr);
+//
+//	char* ret = NULL;
+//	for (ret = strtok(arr, p); ret != NULL;ret = strtok(NULL,p))
+//	{
+//		printf("%s\n",ret);
+//	}
+//	//切割buf中的字符串
+//
+//	/*char* ret = strtok(arr, p);
+//	printf("%s\n", ret);
+//	ret = strtok(NULL, p);
+//	printf("%s\n", ret);
+//	ret = strtok(NULL, p);
+//	printf("%s\n", ret);*/
+//
+//	return 0;
+//}
+
+//#include <errno.h>
+//int main()
+//{
+//	//错误码   错误信息
+//	//0   -    No error
+//	//1   -    Operation not permitted
+//	//2   -    No such file or directory
+//	//...
+//	//errno   是一个全局的错误码的变量
+//	//当C语言的库函数在执行过程中，发生了错误，就会把对应的错误码，赋值到errno。
+//
+//	//char* str = strerror(2);
+//	//printf("%s\n", str);
+//
+//	//打开文件
+//	FILE* pf = fopen("test.txt", "r");
+//	if (pf == NULL)
+//	{
+//		printf("%s\n", strerror(errno));
+//	}
+//	else
+//		printf("open file success\n");
+//	return 0;
+//}
+
+//#include <ctype.h>
+//int main()
+//{
+//	char ch = 'w';
+//	printf("%d\n",islower(ch));
+//	//返回值为0，则为非小写字符。
+//	//返回值不为0，则为小写字符。
+//	return 0;
+//}
+
+//int main()
+//{
+//	//char ch = tolower('Q');
+//	//putchar(ch);
+//	char arr[] = "I Am A Student";
+//	int i = 0;
+//	for (i = 0; i < strlen(arr); i++)
+//	{
+//		arr[i]=tolower(arr[i]);
+//	}
+//	printf("%s\n", arr);
 //	return 0;
 //}
